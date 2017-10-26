@@ -3,68 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>web_1</title>
+	<link href="/static/index/css/index.css" rel="stylesheet">
 	<style>
-		.reverseRotate{
-			width:400px;
-			height:400px;
-			border: solid 1px #ffffff;
-			padding:20px;
-		}
 
-		.rotate{
-			width: 380px;
-			height:380px;
-			background-color: blueviolet;
-			box-shadow: 3px 3px #999999;
-		}
-
-		div {
-		    transform-style: preserve-3d;
-		    perspective: 500px;
-		}
-
-		.rotate {
-	    animation: rotate 5s linear infinite;
-		}
-		.reverseRotate {
-		    animation: reverseRotate 5s linear infinite;
-		}
-		@keyframes rotate {
-		    100% {
-		        transform: rotate(360deg);
-		    }
-		}
-		@keyframes reverseRotate {
-		    100% {
-		        transform: rotate(-360deg);
-		    }
-		}
-
-		@keyframes rotate {
-		    0% {
-		        transform: rotateX(0deg) rotateZ(0deg);
-		    }
-		    50% {
-		        transform: rotateX(40deg) rotateZ(180deg);
-		    }
-		    100% {
-		        transform: rotateX(0deg) rotateZ(360deg);
-		    }
-		}
 
 	</style>
 </head>
 <body>
 <div class="reverseRotate" align="center">
     <div class="rotate" >
-        <div class="content">正负旋转相消3D动画</div>
+        <div class="content">神奇的div</div>
     </div>
 
 
 </div>
 <input id="my" type="text" value="点击看看" onclick="javascript:test(this);">
 
+{#绘制桃心#}
+<h1>绘制桃心</h1>
+<div class="my_true_heart leaves leave01"></div>
+<div class="my_true_heart leaves leave02"></div>
+<div class="my_true_heart leaves leave03"></div>
+<div class="my_true_heart leaves leave04"></div>
+<div class="my_true_heart leaves leave05"></div>
+
+
 </body>
+<script src="/static/index/js/index.js"></script>
+
 <script>
 	function test(obj){
 		alert(obj + obj.id + obj.value);
