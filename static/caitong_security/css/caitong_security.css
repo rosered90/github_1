@@ -1,0 +1,723 @@
+@charset "UTF-8";
+
+
+.div-body{
+	width: 100%;
+	height: 100%;
+}
+
+.div-content-1{
+	width: 100%;
+	height: 100%;
+	background: url(../images/cover_02.jpg) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+
+}
+
+.div-content-2{
+	width: 100%;
+	height: 100%;
+	background: url(../images/meeting_01.jpg) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+
+}
+
+.div-content-3{
+	width: 100%;
+	height: 100%;
+	background: url(../images/meeting_video_01_01.jpg) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+
+}
+
+.div-content-4{
+	width: 100%;
+	height: 100%;
+	background: url(../images/meeting_01.jpg) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.div-content-5{
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg_black_01_01.jpg) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.div-content-6{
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg_black_01_01.jpg) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.div-content-10{
+	width: 100%;
+	height: 100%;
+	background: url(../images/last_cover_01_03.jpg) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.div-content-input{
+	width: 100%;
+	height: 100%;
+	background: url(../images/button_03.png) center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.div-content-5 a{
+    color:#004E8C;
+    text-decoration:underline;
+    size:0.1rem;
+}
+
+.question{
+    width: 85%;
+    /*height: 500px;*/
+    /*height: 80%;*/
+    background-color: #ffffff;
+    border:solid 2px  #004E8C;
+    border-radius:0.5rem;
+    position: relative;
+    top:15%;
+}
+.question2{
+    width: 85%;
+    /*height: 70%;*/
+	left: 8%;
+    background-color: #ffffff;
+    border:solid 2px  #004E8C;
+    border-radius:0.5rem;
+    position: absolute;
+    top:15%;
+}
+
+.question_content p{
+	font-size:0.6rem;
+	font-weight: bold;
+	color:#004E8C;
+}
+
+.question_content{
+	position: relative;
+	right:-3%;
+	width: 88%;
+}
+
+.question_content1{
+	width: 80%;
+	/*border:solid 1px #0000cc;*/
+	margin: 5%;
+}
+
+.question_content1 p{
+	text-align: left;
+}
+
+.question input{
+	margin: 5% 10%;
+	padding:3%;
+	width: 70%;
+	border:solid 1px #004E8C;
+	border-radius: 0.25rem;
+	clear:both;
+}
+
+.button_5{
+	position: relative;
+	top:4%;
+	left:-5%;
+	width: 48%;
+	margin-bottom: 10%;
+}
+
+.spa{
+	position: absolute;
+	bottom:3%;
+	left:3%;
+	right:3%;
+
+}
+
+#button_6{
+	width: 70%;
+	position: relative;
+	top:33%;
+}
+
+#button_7{
+	width: 70%;
+	position: relative;
+	top:38%;
+}
+
+.question p img{
+	float:left;
+	width: 8%;
+}
+
+.question p span{
+	float:left;
+	text-decoration:underline;
+}
+
+.question_title{
+	padding:4% 0 4% 0;
+    margin: 0.5%;
+    height: 18%;
+    border-radius: 0.3rem 0.3rem 0 0;
+    background-color: #004E8C;
+}
+
+.question_title span{
+	 font-size: 1.1rem;
+	 color:#ffffff;
+}
+
+.question_title_01{
+    margin: 0.5%;
+    height: 10%;
+	padding:4% 10% 4% 10%;
+    border-radius: 0.3rem 0.3rem 0 0;
+    background-color: #004E8C;
+	font-size: 1.05rem;
+	word-break:keep-all;/* 不换行 */
+	white-space:nowrap;/* 不换行 */
+	overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+
+}
+
+.question_title_2 img{
+	width: 100%;
+	z-index: -1;
+}
+
+.question_footer{
+	padding:2% 0 2% 0;
+    height:12%;
+    background-color:#E6E6E6;
+    position:absolute;
+    bottom:0;
+}
+
+.answer_frame{
+	width: 90%;
+}
+
+.button_0{
+	padding:2% 10% 2% 10%;
+	width: 15%;
+	position: absolute;
+	right: -15%;
+	top:-5%;
+}
+
+#last_button{
+	padding:2% 10% 2% 10%;
+	width: 15%;
+	position: absolute;
+	right: -15%;
+	top:-5%;
+}
+/*规则说明*/
+.turntable_1{
+	position: relative;
+	width:75vw;
+	/*height:75vw;*/
+	top:10%;
+	height:75vw;
+	padding: 0;
+	/*border-radius: 50%;*/
+	text-decoration: none;
+}
+/*转盘*/
+.turntable{
+	/*width: 86%;*/
+	/*height: 65%;*/
+	position: relative;
+	width:75vw;
+	height:75vw;
+	margin: 2%;
+	padding: 0;
+	/*border:solid 1px #0000cc;*/
+	border-radius: 50%;
+	/*-moz-box-shadow: 0 5px 5px #888888; !* 老的 Firefox *!*/
+	/*box-shadow: 0 5px  5px #888888;*/
+}
+/*转盘*/
+.prize_1{
+
+	width: 48%;
+	/*width: 38%;*/
+	z-index:10000;
+	position: absolute;
+	top:23vw;
+	left:23vw;
+	/*position: relative;*/
+	/*top:-60%;*/
+	/*top:-66%;*/
+}
+
+.prize_2{
+	/*border:solid 1px #0000cc;*/
+	border-radius: 50%;
+	width: 100%;
+	/*position: relative;*/
+	/*right:1%;*/
+	/*font-size: 100%;*/
+	/*padding:0;*/
+}
+
+.prize_3{
+	position: relative;
+	top:-2%;
+	width: 100%;
+}
+
+
+.quiz_footer{
+	padding: 8% 2% 0 2%;
+    height:6%;
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.7;
+}
+
+.question_footer p{
+	color:#004E8C;
+	font-size:0.63rem;
+	font-weight: bold;
+}
+
+.question_footer h6{
+	color:red;
+}
+
+/*视频*/
+#video_button{
+	z-index: 10;
+    position: relative;
+    width: 20%;
+    top:15%;
+}
+
+.video{
+	/*height: 20%;*/
+	position: relative;
+	top:-6%;
+	/*right:2%;*/
+}
+/*返回会场的按钮*/
+.return_button{
+    width: 55%;
+    position:relative;
+    /*!*top:50%;*!*/
+	top:28%;
+}
+/*场外提问的按钮*/
+.button_out{
+	z-index: 5;
+	width: 100%;
+	position:absolute;
+	/*top:66%;*/
+
+	bottom:22%;
+	height: 13%;
+	right: 8%;
+}
+
+.button_out_div{
+	position: absolute;
+	bottom:3%;
+	left:13%;
+}
+
+/*光圈的设置*/
+.halo{
+    width: 26%;
+    position: relative;
+    top: 76%;
+}
+
+.halo_1{
+	position:relative;
+	top:2%;
+}
+
+.button{
+    position: relative;
+    width: 50%;
+    top: 75%;
+
+}
+
+/*弹出的对话框*/
+.dialog_1{
+    width: 60%;
+    position: relative;
+    top:35%;
+    left:-2%;
+}
+
+
+
+.dialog_2{
+    width: 50%;
+    position: relative;
+    top:22%;
+    left: 4%;
+}
+
+.dialog_3{
+    width: 38%;
+    position: relative;
+    /*top:1%;*/
+    right: 14%;
+}
+
+.dialog_4{
+    width: 35%;
+    position: relative;
+    top:-35%;
+    right: 25%;
+}
+
+.dialog_4_add{
+	width:63% ;
+	position: relative;
+	top:-24%;
+	left:4%;
+}
+
+.halo_1{
+    width: 28%;
+    position: relative;
+    top:-73%;
+    right: 25%;
+}
+
+.div-content-3 marquee{
+	color:#ffffff;
+	font-size:0.6rem;
+}
+
+.div-content-4 img:first-child{
+    width:50%;
+    position:relative;
+    top:38%;
+    left:7%;
+}
+
+.div-content-4 img:last-child{
+    width:60%;
+    position:relative;
+    top:65%;
+}
+
+/*尾封面的设计*/
+.cover_1{
+	width: 62%;
+	position: relative;
+	top:25%;
+	opacity: 0;
+}
+
+.cover_2{
+	position:absolute;
+	/*top:150%;*/
+	bottom:22%;
+	width: 75%;
+	left:10%;
+	opacity: 0;
+}
+
+.cover_3{
+	position: relative;
+	top:27%;
+	width: 100%;
+}
+
+/*光圈的闪烁*/
+.halo{
+	animation: display_light 1s; /*不透明度数值变小,图片逐渐消失*/
+	-moz-animation: display_light 1s;/* Firefox */
+	-webkit-animation: display_light 1s; /* Safari 和 Chrome */
+	-o-animation: display_light 1s; /* Opera */
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 0.3s;
+}
+@keyframes display_light
+{
+	0% {opacity: 0.6;   filter:alpha(opacity=0.6); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+	50% {opacity: 1;   filter:alpha(opacity=1);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+	100%   {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+}
+@-moz-keyframes display_light /* Firefox */
+{
+	0% {opacity: 0.6;   filter:alpha(opacity=0.6); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+	50% {opacity: 1;   filter:alpha(opacity=1);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+	100%   {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+}
+@-webkit-keyframes display_light /* Safari 和 Chrome */
+{
+	0% {opacity: 0.6;   filter:alpha(opacity=0.6); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+	50% {opacity: 1;   filter:alpha(opacity=1);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+	100%   {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+}
+@-o-keyframes display_light /* Opera */
+{
+	0% {opacity: 0.6;   filter:alpha(opacity=0.6); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+	50% {opacity: 1;   filter:alpha(opacity=1);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+	100%   {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+}
+
+/*封面二维码,字体的样式*/
+.cover_2{
+	animation: cover 1s;
+	-moz-animation: cover 1s;/* Firefox */
+	-webkit-animation: cover 1s; /* Safari 和 Chrome */
+	-o-animation: cover 1s; /* Opera */
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 0.3s;
+	-webkit-animation-duration: 1s;
+	animation-duration:1s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear
+}
+@keyframes cover
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+@-moz-keyframes cover /* Firefox */
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+@-webkit-keyframes cover /* Safari 和 Chrome */
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+@-o-keyframes cover /* Opera */
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+
+ .cover_1{
+	animation: cover 1s;
+	-moz-animation: cover 1s;/* Firefox */
+	-webkit-animation: cover 1s; /* Safari 和 Chrome */
+	-o-animation: cover 1s; /* Opera */
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 0.3s;
+	-webkit-animation-duration: 1.5s;
+	animation-duration:1.5s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear
+}
+@keyframes cover
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+@-moz-keyframes cover /* Firefox */
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+@-webkit-keyframes cover /* Safari 和 Chrome */
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+@-o-keyframes cover /* Opera */
+{
+	0% {opacity: 0;   filter:alpha(opacity=0); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+	50% {opacity: 0.5;   filter:alpha(opacity=0.5);-webkit-transform: scale(0.6, 0.6) ;transform: scale(0.6, 0.6);}
+	100%   {opacity: 100;   filter:alpha(opacity=0.6);-webkit-transform: scale(1, 1) ;transform: scale(1, 1);}
+}
+
+/*礼花的样式*/
+.cover_3{
+	animation: cover_3 3s; /*不透明度数值变小,图片逐渐消失*/
+	-moz-animation: cover_3 3s;/* Firefox */
+	-webkit-animation: cover_3 3s; /* Safari 和 Chrome */
+	-o-animation: cover_3 3s; /* Opera */
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay:3s;
+}
+@keyframes cover_3
+{
+	0% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.4, 0.4) ;transform: scale(0.4, 0.4);}
+	33% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(0.8, 0.8) ;transform: scale(0.8, 0.8);}
+	66% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(1.2, 1.2) ;transform: scale(1.2, 1.2);}
+	100%   {opacity: 0.1;   filter:alpha(opacity=0.1);-webkit-transform: scale(1.6, 1.6) ;transform: scale(1.6, 1.6);}
+}
+@-moz-keyframes cover_3 /* Firefox */
+{
+	0% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.4, 0.4) ;transform: scale(0.4, 0.4);}
+	33% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(0.8, 0.8) ;transform: scale(0.8, 0.8);}
+	66% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(1.2, 1.2) ;transform: scale(1.2, 1.2);}
+	100%   {opacity: 0.1;   filter:alpha(opacity=0.1);-webkit-transform: scale(1.6, 1.6) ;transform: scale(1.6, 1.6);}
+}
+@-webkit-keyframes cover_3 /* Safari 和 Chrome */
+{
+	0% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.4, 0.4) ;transform: scale(0.4, 0.4);}
+	33% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(0.8, 0.8) ;transform: scale(0.8, 0.8);}
+	66% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(1.2, 1.2) ;transform: scale(1.2, 1.2);}
+	100%   {opacity: 0.1;   filter:alpha(opacity=0.1);-webkit-transform: scale(1.6, 1.6) ;transform: scale(1.6, 1.6);}
+}
+@-o-keyframes cover_3 /* Opera */
+{
+	0% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.4, 0.4) ;transform: scale(0.4, 0.4);}
+	33% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(0.8, 0.8) ;transform: scale(0.8, 0.8);}
+	66% {opacity: 0.3;   filter:alpha(opacity=0.3);-webkit-transform: scale(1.2, 1.2) ;transform: scale(1.2, 1.2);}
+	100%   {opacity: 0.1;   filter:alpha(opacity=0.1);-webkit-transform: scale(1.6, 1.6) ;transform: scale(1.6, 1.6);}
+}
+
+
+/*动画循环*/
+.animate_infinite {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-duration: 1.5s;
+	animation-duration:1.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out
+}
+
+/*动画循环-时间缓慢*/
+.animate_infinite_f {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-duration: 6s;
+	animation-duration:6s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;/*设置对象状态为动画开始或结束时的状态*/
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;/*无限次循环*/
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear
+}
+
+.hid{
+	opacity: 0;
+}
+
+.rotate_h{
+	transform:rotate(3240deg);
+	-ms-transform:rotate(3240deg); /* IE 9 */
+	-webkit-transform:rotate(3240deg); /* Safari and Chrome */
+
+	/*transform:rotate(1080deg);*/
+	/*-ms-transform:rotate(1080deg); !* IE 9 *!*/
+	/*-webkit-transform:rotate(1080deg); !* Safari and Chrome *!*/
+	transform-origin: center center;
+	-webkit-transition: width 2s, height 2s, -webkit-transform 12s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 2s, transform 12s;
+}
+
+#mobile_phone{
+	margin: 10% 10%;
+	padding: 3%;
+	width: 70%;
+	border: solid 1px #004E8C;
+	border-radius: 0.25rem;
+	clear: both;
+}
+
+#address{
+	margin: 5% 10%;
+	margin-top: 0!important;
+	margin-bottom: 10% !important;
+	padding: 3%;
+	width: 70%;
+	border: solid 1px #004E8C;
+	border-radius: 0.25rem;
+	clear: both;
+	display: none;
+}
+
+#receive_name{
+	margin: 5% 10%;
+	margin-top: 0!important;
+	margin-bottom: 10% !important;
+	padding: 3%;
+	width: 70%;
+	border: solid 1px #004E8C;
+	border-radius: 0.25rem;
+	clear: both;
+	display: none;
+}
+
+#return_footer img{
+	width: 40% !important;
+}
+.input_submit{
+	width: 60%;
+}
+.bag_info{
+	width: 100%;
+	position: absolute;
+	top: 45%;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #e60012;
+}
+.input_button{
+	/*margin-top: 5%;*/
+}
+.last_question{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#input_title{
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+#input_jump img{
+	width: 70%;
+
+}
+.last_text{
+	margin-top: 10%;
+	margin-bottom: 10%;
+	font-size: 0.6rem;
+	color: #004e8c;
+}

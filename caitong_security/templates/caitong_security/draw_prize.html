@@ -1,0 +1,205 @@
+{% extends 'mbase_new.html' %}
+{% block title %}财通证券线上互动{% endblock %}
+{% block head %}
+    <link href="{{ STATIC_URL }}common/css/animation.css" rel="stylesheet"/>
+    <link href="{{ STATIC_URL }}caitong_security/css/caitong_security.css" rel="stylesheet">
+	{% block headcss %}
+	{% endblock %}
+	{% block headjs %}
+	{% endblock %}
+{% endblock %}
+{% block baidujs %}
+	hm.src = "https://hm.baidu.com/hm.js?76f9dabbb0877098587e3d30f32cc302";
+{% endblock %}
+{% block bodyclass %}{% endblock %}
+{% block body %}
+	<div class="div-body" style="position: fixed" align="center">
+
+		<div class="div-content-5"  id="div-content-5">
+        {#	第五页#}
+        <div class="question " id="content-5">
+            <img class="button_0" id="test_1" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+            <div class="question_title ">
+                <span>提问“你的不懂”<br/>让我更懂你</span>
+            </div>
+
+            <input name="know" type="text" id="know" style="font-size: 0.7rem;" placeholder="输入您的不懂"><br/>
+            <div class="question_content">
+                <p id="q_1"><img  src="{{ STATIC_URL }}caitong_security/images/prize_01_10.png"/> <span>财商是天生的吗？</span></p><br/>
+                <p id="q_2"><img  src="{{ STATIC_URL }}caitong_security/images/prize_01_10.png"/><span>每个人生阶段...财富目标？</span></p><br/>
+                <p id="q_3"><img  src="{{ STATIC_URL }}caitong_security/images/prize_01_10.png"/><span>什么金融产品比较好？</span></p><br/>
+               <p  id="q_4"><img src="{{ STATIC_URL }}caitong_security/images/prize_01_10.png"/><span>下半年股市将走向何方？</span></p><br/>
+                <p  id="q_5"><img src="{{ STATIC_URL }}caitong_security/images/prize_01_10.png"/><span>我可以投资什么类型的股票？</span></p>
+            </div>
+
+        <img class="button_5" id="button_5" src="{{ STATIC_URL }}caitong_security/images/publish_button_01_03.png" />
+        <span class="spa" style=" font-weight:500; font-size:0.7rem; color:#004E8C;">提问即可抽10-100元红包</span>
+    </div>
+
+       {# 问答一#}
+    <div class="question hide" id="answers-1" style="height: 53%;position: relative; top:15%;">
+        <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+        <div class="question_title_01">
+            <p style="color: #ffffff">财商是天生的吗？</p>
+        </div>
+         <div class="question_content1">
+             <span style="font-size: 0.7rem; font-weight: bold; color:#004E8C;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本质上，财商是指商业敏锐度、创造财富和管理财富的能力。它并不是高深莫测的东西，是可以通过学习和实践得以改变的。</span>
+             <img class="answer_frame" src="{{ STATIC_URL }}caitong_security/images/know_03.png" />
+         </div>
+     </div>
+        {#问答二#}
+    <div class="question hide" id="answers-2" style="height: 55%;position: relative; top:15%;">
+        <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+        <div class="question_title_01">
+            <p style="color: #ffffff">每个人生阶段应该设定...？</p>
+        </div>
+        <div class="question_content1">
+           <span style="font-size: 0.7rem; font-weight: bold; color:#004E8C;">单  身  期：搭配投资多多实践<br>
+            家庭形成期：积极入股创造财富<br>
+            家庭成长期：留存保险规避风险<br>
+            家庭成熟期：积极与保守相平衡<br>
+            退休衰老期：健康第一理财第二<br>
+            </span>
+           <img class="answer_frame" src="{{ STATIC_URL }}caitong_security/images/know_03.png" />
+        </div>
+    </div>
+
+        {# 问答三#}
+     <div class="question hide" id="answers-3" style="height: 68%;position: relative; top:15%;">
+        <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+        <div class="question_title_01">
+            <p style="color: #ffffff">什么金融产品比较好？</p>
+        </div>
+        <div class="question_content1">
+           <span style="font-size: 0.7rem; font-weight: bold; color:#004E8C;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好的金融产品因人而需。给您推荐财通证券旗下大财富管理平台、融资定制服务、资管产品、基金产品、期货产品、投行业务、跨境投融服务等，全方位的投资理财解决方案，
+             做更懂你的综合金融服务商。</span>
+           <img class="answer_frame"  src="{{ STATIC_URL }}caitong_security/images/know_03.png" />
+         </div>
+     </div>
+
+        {#问答四#}
+     <div class="question hide" id="answers-4" style="height: 50%;position: relative; top:15%;">
+            <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+            <div class="question_title_01">
+                <p style="color: #ffffff">下半年股市将走向何方？</p>
+            </div>
+            <div class="question_content1">
+                <span style="font-size: 0.7rem; font-weight: bold; color:#004E8C; text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;虽然“预期”总是说不清楚，但我们相信风雨之后见彩虹，还是可以乐观些。加油！</span><br/><br/>
+                <img class="answer_frame" src="{{ STATIC_URL }}caitong_security/images/know_03.png" />
+            </div>
+     </div>
+
+        {# 问答五#}
+     <div class="question hide" id="answers-5" style="height: 50%;position: relative; top:15%;">
+            <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+            <div class="question_title_01">
+                <p style="color: #ffffff">我可以投资什么类型的...</p>
+            </div>
+            <div class="question_content1">
+               <span style="font-size: 0.7rem; font-weight: bold; color:#004E8C;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;股票投资风格应个人的性格因人而异，从价值投资的角度看购入价值低估的个股风险收益相对比较高。</span>
+               <img class="answer_frame"  src="{{ STATIC_URL }}caitong_security/images/know_03.png" />
+             </div>
+    </div>
+
+        {#	第六页#}
+    <div class="question hide" id="content-6" style="height: 50%;position: relative; top:15%;">
+            <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+            <div class="question_title_01" style="padding:2% 5%;">
+                <p id="question_answer_01" style="color: #ffffff">有什么好的股票推荐？</p>
+            </div>
+        <div class="question_content1">
+           <span style="font-size: 0.7rem; font-weight: bold; color:#004E8C;">下载&nbsp; &nbsp;&nbsp;<a style="color:#F5A200;">财通证券</a>来了解下吧！</span><br/><br/><br/><br/>
+           <img id="button_6" src="{{ STATIC_URL }}caitong_security/images/know_03.png" style="width: 90%;" />
+         </div>
+     </div>
+
+        {#	第八页#}
+     <div  class="question hide" id="content-8" style="height: 74%;">
+            <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />
+            <div class="question_title" style="height: 19%;">
+                <span style="color: #ffffff; font-size:1.2rem;">恭喜您！<br/>获取上市红包抽奖机会！</span>
+            </div>
+            <div class="turntable" id="turntable">
+
+                <img class="prize_2" id="rotate_hd" src="{{ STATIC_URL }}caitong_security/images/last_03.png" />
+                <img class="prize_1" id="button_prize" src="{{ STATIC_URL }}caitong_security/images/dianji_03.png" />
+            </div>
+            <div class="question_footer" style="width:100%;">
+{#                <h6 id="test"> 点击输入您的联系方式</h6>#}
+{#                <p>红包将重值至您的微信钱包账户，请及时关注。</p>#}
+            </div>
+     </div>
+
+        {#	第九页#}
+        <div class="question hide" id="content-9" style="position: relative; top:-56%;">
+{#           <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />#}
+            <div class="question_title" style="position: relative">
+                <span style="color: #ffffff; font-size: 1.05rem;">恭喜您!<br/><span id="prize_info"></span></span>
+            </div>
+            <img class="prize_3" src="{{ STATIC_URL }}caitong_security/images/honhba_03.png" />
+            <div id="bag_info" class="bag_info"></div>
+            <div class="question_footer" style="width: 100%;">
+                <h6 id="input_jump">点击输入您的联系方式</h6>
+                <div id="prize_type" class="hide">1</div>
+{#                <p style="color:#004E8C">红包将重值至您的微信钱包账户，请及时关注。</p>#}
+            </div>
+        </div>
+
+        {#第十页#}
+        <div class="div-content-10 hide" style="position: relative; top:-74.6%;" id="content-10">
+             <img class="cover_1 " id="cover_1" src="{{ STATIC_URL }}caitong_security/images/cover_word_01_03.png"/>
+             <img class="cover_2 " src="{{ STATIC_URL }}caitong_security/images/erweima_01_07.png"/>
+             <img class="cover_3 animate_infinite_f" id="lihua" src="{{ STATIC_URL }}caitong_security/images/lihua_01_10.png"/>
+		</div>
+
+
+{#            <div class="div-content-input" id="div-content-input" style="height: 50%;position: relative; top:15%;">#}
+{#                <div class="question" id="content-input">#}
+{#                    <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png"/>#}
+{#                    <div class="question_title ">#}
+{#                        <span>提问“你的不懂”<br/>让我更懂你</span>#}
+{#                    </div>#}
+{##}
+{#                    <input name="know" type="text" id="know" style="font-size: 0.7rem;" placeholder="输入您的不懂"><br/>#}
+{#                </div>#}
+{#            </div>#}
+            <div class="question2 hide" id="div-content-input">
+{#            <img class="button_0" src="{{ STATIC_URL }}caitong_security/images/prize_01_06.png" />#}
+            <div class="question_title last_question">
+                <span>请输入您的联系方式</span>
+            </div>
+                <br>
+                <input name="mobile_phone" type="number" id="mobile_phone" style="font-size: 0.7rem;"
+                       placeholder="请输入您的手机号码">
+                <br>
+                <input name="address" class="hide" type="text" id="address" style="font-size: 0.7rem" placeholder="请输入您的收件地址">
+                <br>
+            <div class="question_content input_button">
+                <img id="input_submit" src="{{ STATIC_URL }}caitong_security/images/submit.png" class="input_submit">
+{#               <p id="submit_test"><span>提交</span></p><br/>#}
+
+            </div>
+
+{#        <img class="button_5" id="button_5" src="{{ STATIC_URL }}caitong_security/images/publish_button_01_03.png" /><br/>#}
+{#        <span class="spa" style=" font-weight:500; font-size:0.7rem; color:#004E8C;">提问即可抽10-100元红包</span>#}
+        </div>
+
+
+     </div>
+
+	</div>
+{% endblock %}
+{% block foot %}
+	<script src="{{ STATIC_URL }}caitong_security/js/actiivity.js"></script>
+    <script src="{{ STATIC_URL }}caitong_security/js/jquery.min.js"></script>
+    <script>
+{#    var my_h = document.body.clientWidth * 1.775;#}
+{#    var my_h1 = document.body.clientHeight * 1.775;#}
+{#    var my_h2 = document.body.clientWidth;#}
+{#    document.getElementsByTagName('html')[0].style.height = my_h + 'px';#}
+{#    $("#test_1").click(function(){#}
+{#        alert(my_h1);#}
+{#    });#}
+
+    </script>
+{% endblock %}

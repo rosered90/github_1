@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <div>
+            <input type="text" name="user"/>
+        </div>
+        <div>
+            <input type="password" name="pwd"/>
+        </div>
+        <input type="button" value="提交" onclick="DoSubmit();"/>
+    </div>
+    <script src="/static/js/jquery-1.10.2.js"></script>
+    <script>
+        var input_dict = {};
+        function DoSubmit() {
+            $("input").each(function () {     {% comment %}相当于for循环所有input标签{% endcomment %}
+                var v = $(this).val();        {% comment %}#获取循环到当前input标签的内容{% endcomment %}
+                var n = $(this).attr('name'); {% comment %}#获取循环到当前input标签的属性值,name=user,user就是属性值,name=pwd,pwd就是属性值{% endcomment %}
+                input_dict[n] = v;            {% comment %}#生成字典:{'属性值':'标签输入的内容'},{'pwd':111}{% endcomment %}
+            });
+        console.log(input_dict);
+        $.ajax({
+            url:'/login/',
+            type:'POST',
+            data:input_dict,
+            success:function (data) {
+                console.log(data);
+            },
+            error:function () {
+
+            }
+        })
+        }
+    </script>
+</body>
+</html>

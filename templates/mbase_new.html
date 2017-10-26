@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{#	此页面为新的的移动端页面的base，和mbase的区别只有初始化rem时字体大小改变而已，为了不对以前的页面造成影响特新建该页面#}
+	<meta charset="UTF-8">
+	{% block viewport %}
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	{% endblock %}
+	<meta name="format-detection" content="telephone=no">
+	<title>{% block title %}首页{% endblock %}</title>
+	<link href="/static/common/css/common.css" type="text/css" rel="stylesheet">
+	<script>
+		var ele = document.getElementsByTagName("html")[0],
+				size = ele.offsetWidth / 640 * 40;
+		ele.style.fontSize = size + "px"
+	</script>
+	<script src="/static/common/js/jquery-1.12.3.min.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			{% block baidujs %}
+{#				百度js，用于不同项目上配置不同的百度账号，该配置为交行微信统计#}
+			hm.src = "https://hm.baidu.com/hm.js?88df160a7cc4eb8043b2b1f414bc3949";
+			{% endblock %}
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	{% block head %}
+	{% endblock %}
+</head>
+<body {% block bodyclass %}{% endblock %}>
+	{% block body %}
+	{% endblock %}
+</body>
+<footer>
+    {% block dajaxice %}
+{#        {% load dajaxice_templatetags %}#}
+{#        {% dajaxice_js_import %}#}
+    {% endblock %}
+	{% block foot %}
+	{% endblock %}
+</footer>
+</html>
