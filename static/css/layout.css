@@ -1,0 +1,180 @@
+body{
+	font-family:"Helvetica", "Arial", sans-serif;
+	color:#333;
+}
+
+a{
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.gallery ul{
+	padding:0;
+}
+
+.gallery li{
+	display: inline-block;
+	margin-left: 3.5%;
+}
+
+.gallery img{
+	margin-top: 3%;
+}
+
+.content{
+	display: none;
+}
+
+#panel1{
+	position: relative;
+	width:100px;
+	height: 100px;
+	border:1px solid #F5A200;
+	background-color: #E6E6E6;
+}
+
+/*视频切换*/
+.v_show{
+	margin-top:0;
+}
+
+.v_caption {
+	/*border:1px solid #0087E1;*/
+	background-color: #E6E6E6;
+	padding: 1%;
+}
+.v_caption div{
+	display: inline-block;
+	/*border:1px solid red;*/
+	position:relative;
+	top:-50px;
+	left:200px;
+	float: left;
+	/*margin-left: 2%;*/
+}
+.v_caption em{
+	float:right;
+	position:relative;
+	top:-50px;
+}
+
+.v_content{
+	position:relative;
+	border:1px solid red;
+	background-color: #c0c0c0;
+	width:1400px;
+	height: 400px;
+	overflow: hidden;/*--相框作用，只显示一个图片---*/
+    border-radius:5px;
+	white-space: nowrap;
+}
+.v_content_list{
+	position:relative;
+}
+.v_content_list li{
+	display: inline-block;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-top: 3%;
+	text-align: center;
+	/*border:1px solid red;*/
+}
+
+.v_content_list img{
+	width: 250px;
+	height: 250px;
+}
+
+/*#loading{*/
+	/*background-color: #c09853;*/
+	/*position: fixed;*/
+	/*top:500px;*/
+	/*left:800px;*/
+/*}*/
+
+/*聊天室*/
+#messagewindow{
+	width:600px;
+	height:600px;
+	border:1px solid #000000;
+}
+
+
+/*轮播图*/
+	.frame_father{
+		position: relative;
+		height: 500px;
+	}
+
+    #frame {/*----------图片轮播相框容器----------*/
+        position: absolute; /*--绝对定位，方便子元素的定位*/
+        width: 900px;
+        height: 300px;
+        overflow: hidden;/*--相框作用，只显示一个图片---*/
+        border-radius:5px;
+    }
+    #dis {/*--绝对定位方便li图片简介的自动分布定位---*/
+        position: absolute;
+        left: -50px;
+        top: -10px;
+        opacity: 0.5;
+    }
+    #dis li {
+        display: inline-block;
+        width: 200px;
+        height: 20px;
+        margin: 0 50px;
+        float: left;
+        text-align: center;
+        color: #fff;
+        border-radius: 10px;
+        background: #000;
+    }
+    #photos img {
+        float: left;
+        width:900px;
+        height:300px;
+    }
+    #photos {/*---设置总的图片宽度--通过位移来达到轮播效果----*/
+        position: absolute;z-index:9;
+        width: calc(900px * 5);/*---修改图片数量的话需要修改下面的动画参数*/
+    }
+    .play{
+        animation: ma 20s ease-out infinite alternate;/**/
+    }
+    @keyframes ma {/*---每图片切换有两个阶段：位移切换和静置。中间的效果可以任意定制----*/
+        0%,20% {        margin-left: 0px;       }
+        25%,40% {       margin-left: -900px;    }
+        45%,60% {       margin-left: -1800px;    }
+        65%,80% {       margin-left: -2700px;    }
+        85%,100% {      margin-left: -3600px;   }
+    }
+    .num{
+        position:absolute;z-index:10;
+        display:inline-block;
+        right:450px;top:265px;
+        border-radius:100%;
+        background:#808080;
+        width:25px;height:25px;
+        line-height:25px;
+        cursor:pointer;
+        color:#fff;
+        text-align:center;
+        opacity:0.8;
+    }
+    .num:hover{background:#00f;}
+    .num:hover,#photos:hover{animation-play-state:paused;}
+    .num:nth-child(2){margin-right:30px}
+    .num:nth-child(3){margin-right:60px}
+    .num:nth-child(4){margin-right:90px}
+    .num:nth-child(5){margin-right:120px}
+    #a1:hover ~ #photos{animation: ma1 .5s ease-out forwards;}
+    #a2:hover ~ #photos{animation: ma2 .5s ease-out forwards;}
+    #a3:hover ~ #photos{animation: ma3 .5s ease-out forwards;}
+    #a4:hover ~ #photos{animation: ma4 .5s ease-out forwards;}
+    #a5:hover ~ #photos {animation: ma5 .5s ease-out forwards;}
+    @keyframes ma1 {0%{margin-left:-3600px;}100%{margin-left:-0px;} }
+    @keyframes ma2 {0%{margin-left:-3600px;}100%{margin-left:-900px;}   }
+    @keyframes ma3 {100%{margin-left:-1800px;}   }
+    @keyframes ma4 {100%{margin-left:-2700px;}   }
+    @keyframes ma5 {100%{margin-left:-3600px;}  }

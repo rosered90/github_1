@@ -2,40 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>ajax获取</title>
+	<script src="/static/js/jquery-3.2.1.js"></script>
+	<script src="/static/js/showPic.js"></script>
+	<link rel="stylesheet" href="/static/css/layout.css">
 </head>
 <body>
-    <div>
-        <div>
-            <input type="text" name="user"/>
-        </div>
-        <div>
-            <input type="password" name="pwd"/>
-        </div>
-        <input type="button" value="提交" onclick="DoSubmit();"/>
-    </div>
-    <script src="/static/js/jquery-1.10.2.js"></script>
-    <script>
-        var input_dict = {};
-        function DoSubmit() {
-            $("input").each(function () {     {% comment %}相当于for循环所有input标签{% endcomment %}
-                var v = $(this).val();        {% comment %}#获取循环到当前input标签的内容{% endcomment %}
-                var n = $(this).attr('name'); {% comment %}#获取循环到当前input标签的属性值,name=user,user就是属性值,name=pwd,pwd就是属性值{% endcomment %}
-                input_dict[n] = v;            {% comment %}#生成字典:{'属性值':'标签输入的内容'},{'pwd':111}{% endcomment %}
-            });
-        console.log(input_dict);
-        $.ajax({
-            url:'/login/',
-            type:'POST',
-            data:input_dict,
-            success:function (data) {
-                console.log(data);
-            },
-            error:function () {
+	<div id="loading">加载中......</div>
+	<h1>load方法</h1>
+	<input type="button" id="send" value="Ajax获取"/>
+	<div class="comment">已有评论：</div>
+	<div id="resText"></div>
 
-            }
-        })
-        }
-    </script>
+	<!--$.get()方法-->
+	<h1>$.get()方法</h1>
+	<form action="/web1/au/" id="form1">
+		<p>评论：</p>
+		<p>姓名：<input type="text" name="username" id="username"></p>
+		<p>内容：<textarea name="content" id="content" cols="20" rows="2"></textarea></p>
+		<p><input type="button" id="send1" value="提交"></p>
+	</form>
+	<div class="comment1">已有评论：</div>
+	<div id="resText1"></div>
+
+	<!--a+b之和-->
+	<h1>a+b之和</h1>
+	<p>请输入两个数字</p>
+	<form action="/web1/add/" method="get">
+		{% csrf_token %}
+	     a: <input type="text" id="a" name="a"> <br>
+	     b: <input type="text" id="b" name="b"> <br>
+	     <p>result: <span id='result'></span></p>
+	     <button type="button" id='sum'>提交</button>
+	 </form><br/><br/>
+
+	<!--聊天信息框-->
+	<h1>聊天信息框</h1>
+	<div id="wrapper">
+		<p id="messagewindow"><span id="loading">加载中...</span></p>
+		<form action="" id="chatform">
+			姓名：<input type="text" id="author" size="50"><br/>
+			内容：<input type="text" id="msg" size="50"><br/>
+			<input type="submit" value="发送"> <br/>
+		</form>
+	</div>
+
+
 </body>
+	<script>
+	 $(function () {
+		 $("#send").click(function () {
+			 $("#resText").load('/web1/test/ .para');  //将test的页面的class=para的内容传到ajax页面
+		 });
+	 });
+			//a+b之和
+	$(document).ready(function(){
+      $("#sum").click(function(){
+        var a = $("#a").val();
+        var b = $("#b").val();
+
+        $.get("/web1/add/",{'a':a,'b':b}, function(ret){
+            $('#result').html(ret)
+        })
+      });
+    });
+
+	// 用户和内容输入后在下端异步显示
+	$(function () {
+		$("#loading").ajaxStart(function () {
+		alert("kaishi");
+		$(this).show();
+	});
+	$("#loading").ajaxStop(function () {
+		alert("jieshu");
+		$(this).hide();
+	})
+
+		$("#send1").click(function () {
+{#			var username = $("#username").val();#}
+			var content = $("#content").val();
+			$.get("/web1/au/", $("#form1").serialize(),function (data) {   //序列化元素
+				$("#resText1").html(data);  //将返回的数据添加到网页上
+			});
+		});
+		//等同与下段代码(有点小问题)
+{#		$("#send1").click(function () {#}
+{#			$("#resText1").load("/web1/au/",{#}
+{#				username:$("#username").val(),#}
+{#				content:$("#content").val()#}
+{#			})#}
+{#		})#}
+
+	});
+
+    </script>
 </html>

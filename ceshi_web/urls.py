@@ -11,7 +11,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^web1/', include('web_1.urls')),
-    url(r'^login/', views.login),
+    # url(r'^login/', views.login),
     url(r'^caitong/', include('caitong_security.urls')),
-
+    url(r'^shop/', include('shop.urls')),
 )
