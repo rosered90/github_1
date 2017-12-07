@@ -1,0 +1,78 @@
+*{
+	margin:0;
+	padding:0;
+	word-wrap:break-word;
+	word-break: break-all;
+}
+
+a{
+	color:#0287ca;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+ul,li{
+	list-style: none;
+}
+
+img{
+	border:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:1em;
+}
+
+html{
+	overflow: -moz-scrollbars-vertical; /*在Firefox浏览器下始终显示滚动条*/
+}
+
+/*logo样式设置*/
+#logo{
+	float:left;
+	margin: 2% 0 0 5%;
+	color:#fff;
+	font-size: 2.5rem;
+	font-weight:500;
+	line-height: 1rem;
+}
+
+/*切换皮肤样式*/
+#skin{
+	float: right;
+	list-style:none;
+	width: 16%;
+	margin:1%;
+	padding:0.5%;
+	border:1px solid #cccccc;
+	background-color: #fff;
+}
+
+#skin li{
+	float: left;
+	width: 1.5vw;
+	height: 1.5vw;
+	margin-right: 5.58%;
+	/*overflow: hidden;*/
+	border:1px solid red;
+	cursor: pointer; /*放在上面显示手指样式*/
+	display: inline-block;
+	text-indent: -999px;
+	background: url(../images/prize_01_10.png) bottom;
+}
+
+/*#skin_0{background-position: 0 0;}*/
+/*#skin_1{background-position: 15px 0;}*/
+/*#skin_2{background-position: 25px 0;}*/
+/*#skin_3{background-position: 55px 0;}*/
+/*#skin_4{background-position: 75px 0;}*/
+/*#skin_5{background-position: 95px 0;}*/
+/*#skin_0.selected{background-position: 0  25px;}*/
+/*#skin_0.selected{background-position: 15px  15px;}*/
+/*#skin_0.selected{background-position: 35px  15px;}*/
+/*#skin_0.selected{background-position: 55px  15px;}*/
+/*#skin_0.selected{background-position: 75px  15px;}*/
+/*#skin_0.selected{background-position: 95px  15px;}*/
