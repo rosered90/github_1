@@ -71,3 +71,6 @@ def form_action(request):
 
 def shopping(request):
 	return render_to_response('web_1/shopping.html', locals(), context_instance=RequestContext(request))
+
+def vue_ceshi(request):
+	return render_to_response('web_1/vue_ceshi.html', locals(), context_instance=RequestContext(request))
