@@ -3,44 +3,113 @@
 <head>
 	<meta charset="UTF-8">
 	<title>测试</title>
-    <script src="/static/js/jquery-1.11.0.min.js"></script>
+
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/chosen.css">
+
     <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
+
         .div1{
-    width:200px;
-    height:200px;
-    position:absolute;
-    {#top:50px;#}
-    {#left:100px;#}
-    background:#00BCF3;
-    display:none;
-    }
+            width:200px;
+            height:200px;
+            position:absolute;
+            background:#00BCF3;
+            display:none;
+            }
     </style>
 </head>
 <body>
-	<div class="comment">
-		已有评论：
-	</div>
-	<div class="comment">
-		<h6>张三：</h6>
-		<p class="para">沙发</p>
-	</div>
-	<div class="comment">
-		<h6>李四：</h6>
-		<p class="para">板凳</p>
-	</div>
-	<div class="comment">
-		<h6>王五：</h6>
-		<p class="para">地板</p>
-	</div>
-    <div class="form-control"></div>
+    <h3>input框的测试</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <div class="form-control">1</div>
+                        </div>
+                    </div>
 
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <div class="form-control">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <div class="form-control">3</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <div class="form-control">4</div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-control"></div>
+            </div>
+            <div class="col-sm-8">
+                <div class="form-control"></div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <h3>模拟框的隐藏事件</h3>
     <input class="btn" type="button" value="点击"/>
     <div class="div1"></div>
 
+    <h3>多选框</h3>
+    <div class="col-sm-1">
+        <label {% comment %}class="form-label"{% endcomment %}>选择您所需要的权限</label>
+    </div>
+    <div class="col-sm-3">
+        <!--select是多选框中最重要的一句，切记不要写错-->
+        <select name="name" data-placeholder="请选择所需的权限" style="width:80%;" class="chosen-select"  multiple tabindex="2">
+            <option value="">权限1</option>
+            <option value="">权限2</option>
+            <option value="">权限3</option>
+            <option value="">权限4</option>
+
+
+        </select>
+    </div>
+
 
 </body>
+    <script src="/static/js/jquery-1.11.0.min.js"></script>
+    <script src="/static/js/chosen.jquery.js"></script>
 <script>
+    //多选框的相应样式
+    $(document).ready(function () {
+        var config = {   //chosen的相应js
+            '.chosen-select': {},
+            '.chosen-select-deselect': {allow_single_deselect: true},
+            '.chosen-select-no-single': {disable_search_threshold: 10},
+            '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
+            '.chosen-select-width': {width: "95%"}
+        };
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+    });
+     //模拟框的点击旁处隐藏
     $(document).ready(function () {
         $(".btn").click(function() { //点击按钮出现div1
             $(".div1").show("slow");
@@ -52,5 +121,6 @@
             event.stopPropagation(); //阻止事件冒泡
         });
     });
+
 </script>
 </html>
