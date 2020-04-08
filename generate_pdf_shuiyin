@@ -1,0 +1,60 @@
+```
+######## 基础准备 ########
+import os
+
+os.getcwd()
+os.getcwd()  # 获取当前工作目录
+
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import cm
+
+from PyPDF2 import PdfFileWriter, PdfFileReader
+
+
+######## 1.生成水印pdf的函数 ########
+def create_watermark(content):
+    # 默认大小为21cm*29.7cm
+    c = canvas.Canvas(f'mark{content}.pdf', pagesize=(30 * cm, 30 * cm))
+    c.translate(10 * cm,
+                10 * cm)  # 移动坐标原点(坐标系左下为(0,0)))
+    c.setFont('Helvetica', 40)  # 设置字体为宋体，大小22号
+    c.setFillColorRGB(0.5, 0.5,
+                      0.5)  # 灰色
+    c.rotate(45)  # 旋转45度，坐标系被旋转
+    c.setFillAlpha(0.3)  # 设置透明度
+    c.drawString(3 * cm, 12 * cm, content)
+    c.drawString(-7 * cm, 4 * cm, content)
+    c.drawString(7 * cm, 1 * cm, content)
+    c.drawString(0 * cm, -7 * cm, content)
+    c.save()  # 关闭并保存pdf文件
+    return f'mark{content}.pdf'
+
+
+######## 2.为pdf文件加水印的函数 ########
+def add_watermark2pdf(input_pdf, output_pdf, watermark_pdf):
+    # 获取一个PdfFileReader对象
+    watermark = PdfFileReader(watermark_pdf)
+    watermark_page = watermark.getPage(0)
+    pdf = PdfFileReader(input_pdf, strict=False)
+    pdf_writer = PdfFileWriter()
+    for page in range(pdf.getNumPages()):
+        pdf_page = pdf.getPage(page)
+        pdf_page.mergePage(watermark_page)
+        pdf_writer.addPage(pdf_page)
+    pdfOutputFile = open(output_pdf, 'wb')
+    # pdf_writer.encrypt('12')  # 设置pdf密码
+    pdf_writer.write(pdfOutputFile)
+    pdfOutputFile.close()
+
+
+
+######## 3.调用前面的函数制作商家水印pdf ########
+if __name__ == '__main__':
+    values = ["generated", "accepted"]
+    for i in values:  # i制作水印，j文件名，k对应ID
+        file_pdf = create_watermark(i)  # 创造了一个水印pdf：mark.pdf
+        print(file_pdf)
+        add_watermark2pdf('out.pdf', f'result{i}.pdf', file_pdf)
+        print('———————已制作好第' + i + '个pdf，正在准备下一个———————')
+    print('———————所有文件已转化完毕———————')
+```
